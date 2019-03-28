@@ -2,7 +2,7 @@
 ## Optional override of deployment mode. We recommend you use the
 ## command bin/magento deploy:mode:set to switch modes instead
 
-#   SetEnv MAGE_MODE default # or production or developer
+SetEnv MAGE_MODE developer
 
 ############################################
 ## Uncomment these lines for CGI mode.
