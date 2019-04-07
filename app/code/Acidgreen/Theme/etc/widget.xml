@@ -1,0 +1,211 @@
+<?xml version="1.0" ?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+
+    <widget class="Acidgreen\Theme\Block\Widget\HeroBanner" id="acidgreen_theme_herobanner">
+        <label>acidgreen - Hero Banner</label>
+        <description></description>
+        <parameters>
+            <parameter name="banner_name" sort_order="10" visible="true" xsi:type="text" required="true">
+                <label>Title</label>
+            </parameter>
+            <parameter name="banner_mobile" xsi:type="block" visible="true" sort_order="30" required="true">
+                <label translate="true">Mobile Photo</label>
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Mobile Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="banner_desktop" xsi:type="block" visible="true" sort_order="40"  required="true">
+                <label translate="true">Desktop Photo</label>
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Desktop Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="button_1" sort_order="50" visible="true" xsi:type="text">
+                <label>Button 1</label>
+            </parameter>
+            <parameter name="button_link_1" sort_order="60" visible="true" xsi:type="text">
+                <label>Link 1</label>
+            </parameter>
+
+            <parameter name="button_2" sort_order="70" visible="true" xsi:type="text">
+                <label>Button 2</label>
+            </parameter>
+            <parameter name="button_link_2" sort_order="80" visible="true" xsi:type="text">
+                <label>Link 2</label>
+            </parameter>
+
+        </parameters>
+    </widget>
+
+
+
+
+    <widget class="Acidgreen\Theme\Block\Widget\TwoColBanner" id="acidgreen_theme_2colbanner">
+        <label>acidgreen - Two Column Banner</label>
+        <description></description>
+        <parameters>
+
+            <parameter name="label1" xsi:type="block" visible="true" sort_order="1">
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\Html">
+                    <data>
+                        <item name="text" xsi:type="string">Photo 1</item>
+                        <item name="datatype" xsi:type="string">h3</item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="title_1" sort_order="5" visible="true" xsi:type="text" required="true">
+                <label>Title 1</label>
+            </parameter>
+            <parameter name="photo1" xsi:type="block" visible="true" sort_order="90" required="true">
+                <label translate="true">Photo 1</label>
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image 1...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="button_1" sort_order="100" visible="true" xsi:type="text" required="true">
+                <label>Button 1</label>
+            </parameter>
+            <parameter name="button_link_1" sort_order="110" visible="true" xsi:type="text" required="true">
+                <label>Link 1</label>
+            </parameter>
+
+            <parameter name="label2" xsi:type="block" visible="true" sort_order="120">
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\Html">
+                    <data>
+                        <item name="text" xsi:type="string">Photo 2</item>
+                        <item name="datatype" xsi:type="string">h3</item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="title_2" sort_order="121" visible="true" xsi:type="text" required="true">
+                <label>Title 2</label>
+            </parameter>
+            <parameter name="photo2" xsi:type="block" visible="true" sort_order="122" required="true">
+                <label translate="true">Photo 2</label>
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image 2...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="button_2" sort_order="130" visible="true" xsi:type="text" required="true">
+                <label>Button 2</label>
+            </parameter>
+            <parameter name="button_link_2" sort_order="140" visible="true" xsi:type="text" required="true">
+                <label>Link 2</label>
+            </parameter>
+        </parameters>
+    </widget>
+
+
+    <widget class="Acidgreen\Theme\Block\Widget\ThreeColBanner" id="acidgreen_theme_3colbanner">
+        <label>acidgreen - Three Column Banner</label>
+        <description></description>
+        <parameters>
+
+            <!-- 3 Cols - Photo 1 -->
+            <parameter name="label1" xsi:type="block" visible="true" sort_order="1">
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\Html">
+                    <data>
+                        <item name="text" xsi:type="string">Photo 1</item>
+                        <item name="datatype" xsi:type="string">h3</item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="title_1" sort_order="10" visible="true" xsi:type="text" required="true">
+                <label>Title 1</label>
+            </parameter>
+            <parameter name="photo1" xsi:type="block" visible="true" sort_order="20" required="true">
+                <label translate="true">Photo 1</label>
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="button_1" sort_order="30" visible="true" xsi:type="text" required="true">
+                <label>Button 1</label>
+            </parameter>
+            <parameter name="button_link_1" sort_order="40" visible="true" xsi:type="text" required="true">
+                <label>Link 1</label>
+            </parameter>
+
+
+            <!-- 3 Cols - Photo 2 -->
+            <parameter name="label2" xsi:type="block" visible="true" sort_order="50">
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\Html">
+                    <data>
+                        <item name="text" xsi:type="string">Photo 2</item>
+                        <item name="datatype" xsi:type="string">h3</item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="title_2" sort_order="55" visible="true" xsi:type="text" required="true">
+                <label>Title 2</label>
+            </parameter>
+            <parameter name="photo2" xsi:type="block" visible="true" sort_order="60" required="true">
+                <label translate="true">Photo 2</label>
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="button_2" sort_order="70" visible="true" xsi:type="text" required="true">
+                <label>Button 2</label>
+            </parameter>
+            <parameter name="button_link_2" sort_order="80" visible="true" xsi:type="text" required="true">
+                <label>Link 2</label>
+            </parameter>
+
+
+            <!-- 3 Cols - Photo 3 -->
+            <parameter name="label3" xsi:type="block" visible="true" sort_order="90">
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\Html">
+                    <data>
+                        <item name="text" xsi:type="string">Photo 3</item>
+                        <item name="datatype" xsi:type="string">h3</item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="title_3" sort_order="100" visible="true" xsi:type="text" required="true">
+                <label>Title 3</label>
+            </parameter>
+            <parameter name="photo3" xsi:type="block" visible="true" sort_order="110" required="true">
+                <label translate="true">Photo 3</label>
+                <block class="Acidgreen\Theme\Block\Adminhtml\Widget\ImageChooser">
+                    <data>
+                        <item name="button" xsi:type="array">
+                            <item name="open" xsi:type="string">Choose Image...</item>
+                        </item>
+                    </data>
+                </block>
+            </parameter>
+            <parameter name="button_3" sort_order="120" visible="true" xsi:type="text" required="true">
+                <label>Button 3</label>
+            </parameter>
+            <parameter name="button_link_3" sort_order="130" visible="true" xsi:type="text" required="true">
+                <label>Link 3</label>
+            </parameter>
+
+        </parameters>
+    </widget>
+</widgets>

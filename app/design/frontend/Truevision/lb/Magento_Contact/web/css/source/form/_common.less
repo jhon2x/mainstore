@@ -1,0 +1,38 @@
+& when (@media-common = true) {
+    #contact-form {
+        .fieldset {
+            margin: 0 0 20px;
+
+            &> .field:not(.choice) {
+                &> .label {
+                    text-align: left;
+                    float:none;
+
+                    span {
+                        font-weight: 400;
+                    }
+
+                    &:after {
+                        color: #000;
+                    }
+                }
+                &> .control {
+                    width: 100%;
+                    float: none;
+
+                    input[type="text"], input[type="email"], select {
+                        height: 45px;
+                    }
+                }
+            }
+        }
+        .actions-toolbar {
+            margin-left: 0;
+
+            button {
+                padding: 10px 40px;
+            }
+        }
+
+    }
+}

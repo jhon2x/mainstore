@@ -1,0 +1,75 @@
+<?php
+ $contact_form = $this->getContactInquiry();
+
+ $date_received = $this->formatDate(
+    $contact_form->getCreatedAt(),
+    \IntlDateFormatter::MEDIUM,
+    true
+);
+?>
+<section class="admin__page-section order-view-account-information">
+    <div class="admin__page-section-title">
+        <span class="title"><?= $this->escapeHtml(__('Contact Form Entry')) ?></span>
+    </div>
+    <div class="admin__page-section-item order-information">
+            <?php /* Account Information */ ?>
+            <div class="admin__page-section-item-title">
+                <span class="title"><?= $this->escapeHtml(__('Inquiry')) ?></span>
+            </div>
+            <div class="admin__page-section-item-content">
+                <table class="admin__table-secondary order-account-information-table">
+                    <tr>
+                        <th><?= $this->escapeHtml(__('Name')) ?></th>
+                        <td>
+                        	 <?= $this->escapeHtml($contact_form->getName()) ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><?= $this->escapeHtml(__('Email')) ?></th>
+                        <td><a href="mailto:<?php echo $this->escapeHtml($contact_form->getEmail()) ?>"><?php echo $this->escapeHtml($contact_form->getEmail()) ?></a></td>
+                    </tr>
+                     <tr>
+                        <th><?= $this->escapeHtml(__('Order Number')) ?></th>
+                        <td>
+                        	<?= $this->escapeHtml($contact_form->getOrderNumber()) ?>
+                        </td>
+                    </tr>
+                     <tr>
+                        <th><?= $this->escapeHtml(__('Issue')) ?></th>
+                        <td>
+                        	<?= $this->escapeHtml($contact_form->getIssue()) ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><?= $this->escapeHtml(__('Comment')) ?></th>
+                        <td>
+                        	<?= $this->escapeHtml($contact_form->getComments()) ?>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+       </div>
+        <div class="admin__page-section-item order-account-information">
+            <div class="admin__page-section-item-title">
+                <span class="title"><?= $this->escapeHtml(__('Additional Information')) ?></span>
+            </div>
+            <div class="admin__page-section-item-content">
+                <table class="admin__table-secondary order-account-information-table">
+                    <tr>
+                        <th><?= $this->escapeHtml(__('Date & Time Received')) ?></th>
+                        <td>
+                        	 <?= $this->escapeHtml($date_received) ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><?= $this->escapeHtml(__('IP Address')) ?></th>
+                        <td>
+                        	 <?= $this->escapeHtml($contact_form->getIpAddress()) ?>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+</section>

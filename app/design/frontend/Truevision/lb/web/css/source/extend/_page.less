@@ -1,0 +1,30 @@
+
+.page-title{
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  padding-bottom: 30px;
+  position: relative;
+  &:after{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #999;
+    display: inline-block;
+    z-index: 99;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    margin-left: -15px;
+  }
+
+}
+.main .page-title{
+  text-align: left;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  &:after{
+    left: 0px;
+    margin-left: 0px;
+  }
+}

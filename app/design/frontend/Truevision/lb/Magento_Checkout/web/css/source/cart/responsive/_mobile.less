@@ -1,0 +1,31 @@
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.cart-container {
+		display: flex;
+    	flex-direction: column;
+
+    	.cart-summary {
+		    order: 1;
+		}
+
+		.form-cart {
+			order: 0;
+
+			.cart.table-wrapper {
+				table {
+					tbody {
+						tr {
+							td.price, td.qty, td.subtotal {
+								border-top: none;
+							}
+						}
+					}
+				}
+			}
+
+
+		    .main.actions .action.update, #empty_cart_button  {
+			    display: inline-block;
+			}
+		}
+	}
+}

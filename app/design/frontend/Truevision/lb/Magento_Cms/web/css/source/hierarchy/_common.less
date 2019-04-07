@@ -1,0 +1,33 @@
+& when (@media-common = true) {
+    
+   	ul.cms-menu {
+   	    padding: 0;
+   	    
+   		li {
+   			list-style:none;
+
+   			a {
+   				color: #000;
+               font-size: 14px;
+
+   				&:hover {
+   					color: #999;
+   					text-decoration: none;
+   				}
+   			}
+
+            ul li a {
+               font-weight: 600;
+               color: #000;
+            }
+   			
+   		}
+         li.current {
+            a {
+               font-weight: 600;
+               color: #999;
+            }
+            
+         }
+   	}
+}

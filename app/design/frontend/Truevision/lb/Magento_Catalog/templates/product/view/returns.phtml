@@ -1,0 +1,23 @@
+<?php
+    /** @var $_product \Magento\Catalog\Model\Product */
+    /** @var $_helper \Acidgreen\Theme\Helper\Data */
+
+    $_product = $block->getProduct();
+    $_helper = $this->helper('Acidgreen\Theme\Helper\Data');
+
+    $returnEnable = $_helper->getConfig("sales/magento_rma/enabled");
+    $productReturnable = $_product->getIsReturnable();
+    $isSpecial = $_helper->hasSpecialPrice($_product);
+?>
+<p><strong>Returns</strong></p>
+<?php
+
+    if ($productReturnable === 0 || $isSpecial || ($productReturnable === 2 &&  $returnEnable === 0)) : ?>
+
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('product_no_returns_text')->toHtml(); ?>
+
+<?php else : ?>
+
+    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('product_returns_text')->toHtml(); ?>
+
+<?php endif; ?>

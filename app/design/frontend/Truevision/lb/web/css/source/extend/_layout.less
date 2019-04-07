@@ -1,0 +1,48 @@
+.mega-menu.level0>li.mega>.child-content>.child-content-inner-wrap,
+.section-items,
+.header.content,
+#maincontent,
+.footer.content {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.content-width(@_width){
+  .mega-menu.level0>li.mega>.child-content>.child-content-inner-wrap,
+  .section-items,
+  .header.content,
+  .theme-container,
+  #maincontent,
+  .footer.content{
+    max-width: @_width;
+    margin: auto;
+  }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xxl) {
+  .content-width(@layout__max-width);
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+  .content-width(@screen__xl - 40);
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+  .content-width(@screen__l - 44);
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .content-width(@screen__m - 48);
+}
+
+@media screen and (max-width: @screen__m){
+  #maincontent, .footer.content, .theme-container{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width:100%;
+  }
+  .row{
+    margin: 0px !important;
+  }
+}

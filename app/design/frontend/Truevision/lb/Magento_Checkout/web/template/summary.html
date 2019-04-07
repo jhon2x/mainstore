@@ -1,0 +1,17 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div class="opc-block-summary" data-bind="blockLoader: isLoading">
+    <span data-bind="i18n: 'Order Summary'" class="title"></span>
+    <!-- ko foreach: elems() -->
+        <!-- ko template: getTemplate() --><!-- /ko -->
+    <!-- /ko -->
+</div>
+<div id="container-newsletter-subscribe">
+    <input type="checkbox" class="" id="custom_attributes_newsletter_subscribe" name="subscribe" value="1">
+
+    <label class="" for="custom_attributes_newsletter_subscribe">Sign Up for Our Newsletter</label>
+</div>

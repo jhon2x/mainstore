@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Brownbag_Presentation::data" 
+        	 title="Brownbag Presentation Component" 
+        	 module="Brownbag_Presentation" 
+        	 sortOrder="80" 
+        	 resource="Brownbag_Presentation::data"/>
+
+        <add id="Brownbag_Presentation::data_subsection"  
+        	 title="Menu"  
+        	 module="Brownbag_Presentation" 
+        	 sortOrder="50" 
+        	 resource="Brownbag_Presentation::data_subsection" 
+        	 parent="Brownbag_Presentation::data"/>   
+
+        <add id="Brownbag_Presentation::data_subsubsection" 
+        	 title="Sub Menu" 
+        	 module="Brownbag_Presentation" 
+        	 sortOrder="80" 
+        	 resource="Brownbag_Presentation::data_subsubsection" 
+        	 action="brownbagpresentation/data/index" 
+        	 parent="Brownbag_Presentation::data"/>
+    </menu>
+</config>

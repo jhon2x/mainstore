@@ -1,0 +1,80 @@
+& when (@media-common = true) {
+
+  footer.page-footer {
+    .block.newsletter {
+      float: none;
+      max-width: 750px;
+      width: auto;
+      margin: auto;
+      padding: 25px 0;
+
+      .field {
+        margin-right: 0;
+        padding: 0;
+
+        .control:before {
+          display: none;
+        }
+      }
+
+      input, select {
+        height: 35px;
+        border: none;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        color: @color-gray-light2;
+        border-bottom: solid 1px #000;
+      }
+
+      input, select, .mage-error{
+        padding-left: @indent__s;
+      }
+
+      select option {
+        color: @color-gray-light2;
+      }
+
+      .actions button{
+        width: 100%;
+        border-radius: 0px;
+        font-weight: @font-weight__light;
+        border-bottom: 1px solid @primary__color;
+      }
+
+      .col {
+        padding: 0px;
+      }
+
+      .title {
+        display: block;
+        text-align: center;
+        margin-bottom: @indent__l;
+
+        &, & strong {
+          font-size: @font-size__l;
+        }
+      }
+
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break=@screen__xs){
+  footer.page-footer {
+    .block.newsletter {
+      .col{
+        width: 100%;
+
+        &:not(:last-child){
+          margin-bottom: @indent__base;
+        }
+
+        &:last-child{
+          margin-top: @indent__s;
+        }
+      }
+    }
+  }
+}

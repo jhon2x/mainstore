@@ -1,0 +1,63 @@
+<?php
+    $products = $block->getProducts();
+    $categoryId = $block->getCategoryId();
+
+    if($products && $categoryId): ?>
+
+    <div class="swiper-container carousel-container-<?php echo $categoryId ?>">
+        <h3 class="text-center"><?php echo $block->getName() ?></h3>
+        <div class="swiper-wrapper">
+        <?php foreach($products as $product): ?>
+            <div class="swiper-slide">
+                <a href="<?php echo $product->getProductUrl() ?>">
+
+                    <img src="<?php echo $block->getImage($product) ?>"
+                         alt="<?php echo $product->getName() ?>"/>
+
+                </a>
+            </div>
+        <?php endforeach; ?>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script>
+        require([
+            'jquery',
+            'swiper'
+        ], function($, Swiper){
+
+            var swiperCat<?php echo $categoryId ?> = new Swiper('.carousel-container-<?php echo $categoryId ?>', {
+                slidesPerView: 5,
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    // when window width is <= 320px
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    // when window width is <= 480px
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    // when window width is <= 640px
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween: 30
+                    }
+                }
+            });
+
+
+
+        });
+
+    </script>
+
+<?php endif; ?>
+

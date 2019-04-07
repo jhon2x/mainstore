@@ -1,0 +1,57 @@
+@_path: '@{baseDir}fonts/ppm/';
+@_ppm-icon-font-name: 'peppermayo';
+@_font-peppermayo: '@{_path}@{_ppm-icon-font-name}';
+
+@font-face {
+    font-family: @_ppm-icon-font-name;
+    src: url('@{_font-peppermayo}.eot');
+    src: url('@{_font-peppermayo}.eot?#iefix') format('embedded-opentype'), url('@{_font-peppermayo}.woff') format('woff'), url('@{_font-peppermayo}.ttf') format('truetype');
+}
+
+& when (@media-common = true) {
+    [class^=ppm-icon-] {
+        font-family: @_ppm-icon-font-name;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .ppm-icon {
+        &-heart-filled:before {
+            content: "\e90a";
+        }
+        &-arrow-left:before {
+            content: "\e900";
+        }
+        &-arrow-right:before {
+            content: "\e901";
+        }
+        &-bag:before {
+            content: "\e902";
+        }
+        &-close:before {
+            content: "\e903";
+        }
+        &-close-circle:before {
+            content: "\e904";
+        }
+        &-heart:before {
+            content: "\e905";
+        }
+        &-member:before {
+            content: "\e906";
+        }
+        &-search:before {
+            content: "\e907";
+        }
+        &-size:before {
+            content: "\e908";
+        }
+        &-stats:before {
+            content: "\e909";
+        }
+    }
+}

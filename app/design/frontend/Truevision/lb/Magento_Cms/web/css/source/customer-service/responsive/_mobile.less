@@ -1,0 +1,44 @@
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	.page-layout-2columns-left {
+		#maincontent {
+			.sidebar-main {
+				max-width: 100%;
+				position: relative;
+
+				ul.cms-menu {
+			    padding: 0;
+			    display: block;
+			    width: 100%;
+			    height: 35px;
+			    overflow: scroll;
+			    white-space: nowrap;
+			    position: relative;
+
+					li {
+						display: inline-block;
+			    		margin: 0 10px;
+					}
+
+					 ul {
+					    display: inline-block;
+					    padding-left: 10px;
+					}
+
+					
+				}
+				&:after {
+						content: ' ';
+					    position: absolute;
+					    right: -2px;
+					    top: -5px;
+					    width: 40px;
+					    height: 40px;
+					    background: linear-gradient(to left,#fff,rgba(255,255,255,0));
+				}
+			}
+		}
+	}
+
+
+
+}

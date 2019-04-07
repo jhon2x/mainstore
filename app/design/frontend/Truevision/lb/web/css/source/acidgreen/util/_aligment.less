@@ -1,0 +1,21 @@
+.ag-inline-container(@_height: 100px) {
+    > *,
+    &:after {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+    }
+
+    > script {
+        display: none;
+    }
+
+    &:after {
+        height: @_height;
+        content: " ";
+    }
+}
+
+.vertical-middle {
+    vertical-align: middle;
+}

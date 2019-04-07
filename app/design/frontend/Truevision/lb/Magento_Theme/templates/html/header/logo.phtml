@@ -1,0 +1,48 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+?>
+<?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
+<span data-action="toggle-nav" class="action nav-toggle visible-xs-inline-block vertical-middle pull-left"><span><?= /* @escapeNotVerified */ __('Toggle Nav') ?></span></span>
+
+<span class="toggle-search visible-xs-inline-block vertical-middle">
+    <i class="ppm-icon-search" aria-hidden="true"></i>
+</span>
+
+<?php if ($block->isHomePage()):?>
+    <strong class="logo vertical-middle">
+<?php else: ?>
+    <a class="logo  vertical-middle" href="<?= $block->getUrl('') ?>" title="<?= /* @escapeNotVerified */ $storeName ?>">
+<?php endif ?>
+        <img src="<?= /* @escapeNotVerified */ $block->getLogoSrc() ?>"
+             title="<?= /* @escapeNotVerified */ $block->getLogoAlt() ?>"
+             alt="<?= /* @escapeNotVerified */ $block->getLogoAlt() ?>"
+             <?= $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+             <?= $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+        />
+<?php if ($block->isHomePage()):?>
+    </strong>
+<?php else:?>
+    </a>
+<?php endif?>
+
+<div class="hidden">
+    <script type="text/javascript">
+        require(['jquery', 'mage/dropdown'], function($, dropdown) {
+            $(".toggle-search").on("click", function(e) {
+                var isOpen = $("#header-mini-search").hasClass("opened");
+                setTimeout(function(){
+                    $("#header-mini-search").dropdownDialog(isOpen ? "close" : "open");
+                });
+            });
+        });
+    </script>
+</div>

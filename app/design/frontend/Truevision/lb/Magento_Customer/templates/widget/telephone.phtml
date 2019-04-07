@@ -1,0 +1,38 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Widget\Telephone $block */
+?>
+
+<div class="field telephone <?= $block->isRequired() ? 'required' : '' ?>">
+    <label for="telephone" class="label">
+        <span>
+            <?= $block->escapeHtml(__('Phone Number')) ?>
+        </span>
+    </label>
+    <div class="control">
+        <?php
+        $_validationClass = $block->escapeHtmlAttr(
+            $this->helper('Magento\Customer\Helper\Address')
+                ->getAttributeValidationClass('telephone')
+        );
+        ?>
+        <input type="tel"
+               name="telephone"
+               id="telephone"
+               data-msg-required="<?= $block->escapeHtml(__('Please enter your phone number.')) ?>"
+               data-msg-validate-number="<?= $block->escapeHtml(__('Your phone number is invalid.')) ?>"
+               data-msg-minlength="<?= $block->escapeHtml(__('Please enter at least 5 numbers.')) ?>"
+               data-msg-maxlength="<?= $block->escapeHtml(__('Your phone number is too long. Maximum 20 numbers.')) ?>"
+               data-validate="{required:true, 'validate-number':true, 'minlength':5, 'maxlength': 20}"
+               value="<?= $block->escapeHtmlAttr($block->getTelephone()) ?>"
+               title="<?= $block->escapeHtmlAttr(__('Phone Number')) ?>"
+               class="input-text"
+        >
+    </div>
+</div>

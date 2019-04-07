@@ -1,0 +1,42 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Footer"}} @-->
+<!--@vars {
+"var store.getFrontendName()":"Store Name"
+} @-->
+
+                    <!-- End Content -->
+                    </td>
+                </tr>
+                <tr>
+                    <td class="footer">
+                        <p align="center" class="email-social-links">
+                            <a href="https://www.instagram.com/peppermayo/"><img src="{{view url='images/email/instagram.png'}}" /></a>
+                            <a href="https://www.snapchat.com/add/teampeppermayo"><img src="{{view url='images/email/snapchat.png'}}" /></a>
+                            <a href="https://www.facebook.com/peppermayo"><img src="{{view url='images/email/facebook.png'}}" /></a>
+                            <a href="https://www.youtube.com/channel/UC3SiiPePFbH7Mk1WbngHAKg"><img src="{{view url='images/email/youtube.png'}}" /></a>
+                            <a href="https://twitter.com/ShopPeppermayo"><img src="{{view url='images/email/twitter.png'}}" /></a>
+                            <a href="https://itunes.apple.com/us/app/peppermayo/id1131512223"><img src="{{view url='images/email/appstore.png'}}" /></a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" class="email-footer-text">
+                        <p class="closing">{{trans "You are receiving this email because you have purchased a product %store_name via %store_name.com" store_name=$store.getFrontendName()}}.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" class="email-footer-copyright">
+                        <p>Copyright &copy; 2019 <a href="{{store url=""}}" style="color: #ccc; text-decoration: underline;">{{trans "Peppermayo.com" }}</a>. All rights reserved.</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- End wrapper table -->
+</body>

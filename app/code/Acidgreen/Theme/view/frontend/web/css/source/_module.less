@@ -1,0 +1,96 @@
+& when (@media-common=true) {
+
+  .column-block {
+    .image_banner_wrap {
+      position: relative;
+      text-align: center;
+
+      img {
+        max-width: none;
+        width: 100%;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 10px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+      }
+
+      a.image_link:hover {
+        opacity: .8;
+      }
+
+      .btn-default {
+        text-transform: uppercase;
+        opacity: .9;
+        position: relative;
+        margin: 0 20px 10px;
+        border: 0px;
+        padding: 10px 25px;
+
+        &:visited, &:hover, &:active {
+          color: #000;
+          background: #FFF;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m){
+
+  .column-block {
+
+    div.col {
+      padding: 0px;
+
+      .img-responsive {
+        width: 100%;
+      }
+
+      .image_banner_wrap {
+
+        .overlay {
+          position: static;
+          padding: 15px 0px 15px;
+
+          .btn-default {
+            text-transform: none;
+            color: #999;
+            opacity: 1;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .two-columns-block .col {
+    margin-top: @indent__s;
+
+    &:first-child{
+      padding-right: @indent__s;
+    }
+
+    &:last-child{
+      padding-left: @indent__s;
+    }
+  }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs){
+
+  .two-columns-block{
+
+    .col {
+      width: 100%;
+      padding: 0px;
+    }
+  }
+}

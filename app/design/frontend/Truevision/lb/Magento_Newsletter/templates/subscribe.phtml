@@ -1,0 +1,47 @@
+<?php
+    /**
+     * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+     * See COPYING.txt for license details.
+     */
+
+    // @codingStandardsIgnoreFile
+
+?>
+<div class="block newsletter">
+  <div class="title">Sign up and get <strong>$15 off.</strong></div>
+  <div class="row">
+    <form class="form subscribe"
+          novalidate
+          action="<?php /* @escapeNotVerified */
+              echo $block->getFormActionUrl() ?>"
+          method="post"
+          data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+          id="newsletter-validate-detail">
+
+      <div class="grid_8 grid_8_s">
+        <div class="control fancy_select">
+          <select name="gender" title="Gender" id="gender">
+            <option value="female">Join Womens</option>
+            <option value="male">Join Mens</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid_8 grid_8_s">
+        <div class="control">
+          <input name="email" type="email" id="newsletter"
+                 placeholder="<?php /* @escapeNotVerified */
+                     echo __('Your email address') ?>"
+                 data-validate="{required:true, 'validate-email':true}"/>
+        </div>
+      </div>
+      <div class="grid_8 grid_8_s">
+        <button class="action subscribe primary" title="<?php /* @escapeNotVerified */
+            echo __('Get $15 Off') ?>" type="submit">
+          <span><?php /* @escapeNotVerified */
+                  echo __('Get $15 Off') ?></span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

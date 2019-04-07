@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="after.body.start">
+            <block class="Magento\Cms\Block\Block" name="header_ad" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">header_ad</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="header.container">
+            <referenceContainer name="header-wrapper" htmlClass="header content container">
+                <container htmlTag="div" htmlClass="logo-container" name="logo-container" before="-">
+                    <block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
+                        <arguments>
+                            <argument name="logo_img_width" xsi:type="number">189</argument>
+                            <argument name="logo_img_height" xsi:type="number">64</argument>
+                        </arguments>
+                    </block>
+                </container>
+                <container htmlTag="div" htmlClass="header-right" name="header-right" after="-">
+                    <block class="Magento\Customer\Block\Account\Navigation" name="top.links">
+                        <arguments>
+                            <argument name="css_class" xsi:type="string">header links</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </referenceContainer>
+        </referenceContainer>
+
+        <referenceContainer name="footer">
+            <block class="Magento\Cms\Block\Block" name="footer_social_links" after="footer_links">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-social-links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="copyright">
+            <block class="Magento\Cms\Block\Block" name="copyright-links" as="copyright-links">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">copyright-links</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <referenceBlock name="currency">
+            <action method="setOrder">
+                <argument name="sortOrder" xsi:type="number">120</argument>
+            </action>
+        </referenceBlock>
+
+        <referenceBlock name="store.menu">
+             <block class="Acidgreen\Theme\Block\Html\Header\MobileLogo" name="mobile-logo" group="navigation-sections" template="Magento_Theme::html/mobile-logo.phtml" before="-" />
+        </referenceBlock>
+
+        <move element="currency" destination="header-right" before="-"/>
+        
+        <referenceBlock name="header" remove="true" />
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="invitation_link_top" remove="true" />
+    </body>
+</page>

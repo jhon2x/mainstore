@@ -1,0 +1,451 @@
+body{
+     color: #000;
+     font-family: 'Sofia Pro W01',Arial,sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 1.42857143;
+     font-size: 1.4rem;
+}
+ .modal-popup {
+     pointer-events: auto;
+}
+ .modal-popup .modal-inner-wrap {
+     width: 90%;
+     max-width: 680px;
+     background: #fff !important;
+}
+ table{
+     width:100%;
+     border-collapse:collapse;
+     border-spacing:0;
+     max-width:100%
+}
+ table th{
+     text-align:left
+}
+ table>tbody>tr>th,table>tfoot>tr>th,table>tbody>tr>td,table>tfoot>tr>td{
+     vertical-align:top
+}
+ table>thead>tr>th,table>thead>tr>td{
+     vertical-align:bottom
+}
+ table>thead>tr>th,table>tbody>tr>th,table>tfoot>tr>th,table>thead>tr>td,table>tbody>tr>td,table>tfoot>tr>td{
+     padding:8px 10px
+}
+ table.table_size{
+     width:100% !important;
+     margin:20px 0 0
+}
+ table.table_size tr:first-child{
+     font-weight:700
+}
+ table.table_size.no_table_header{
+     margin:0
+}
+ table.table_size.no_table_header tr:first-child{
+     font-weight:400
+}
+ table.table_size tr{
+     background-color:#fff
+}
+ table.table_size tr:nth-child(odd){
+     background-color:#f6f6f6
+}
+ table.table_size tr td{
+     border:1px solid #eee;
+     padding:8px 10px;
+     vertical-align:middle
+}
+ table.table_size tr td p{
+     padding:0;
+     margin:0 !important
+}
+ .product-info-main{
+     padding:45px 80px 20px
+}
+ @media screen and (max-width:767px){
+     .product-info-main{
+         padding:20px 0
+    }
+}
+ .product-info-main .afterpay-installments{
+     font-style:normal !important;
+     margin-bottom:20px;
+     position:relative
+}
+ .product-info-main .page-title{
+     font-size:24px;
+     margin-bottom:.6rem
+}
+ .product-info-main .price{
+     font-size:24px;
+     margin-bottom:.6rem;
+     display:block
+}
+ .product-info-main .old-price{
+     color:red;
+     font-size:80%
+}
+ .product-info-main .old-price .price{
+     font-size:16px !important;
+     text-decoration:line-through
+}
+ .product-info-main .price-final_price .price-label{
+     display:none
+}
+ .product-info-main .price-final_price .special-price{
+     display:inline-block;
+     margin:10px 0 15px
+}
+ .product-info-main .price-final_price .old-price{
+     display:inline-block !important;
+     margin:10px 0 15px 20px;
+     vertical-align:top
+}
+ .product-info-main .price-final_price .old-price .price{
+     margin:0
+}
+ .product-info-main .brand_link{
+     color:#999;
+     margin:15px auto;
+     display:block
+}
+ .product-info-main .product-options-wrapper{
+     position:relative
+}
+ .product-info-main .product-options-wrapper #sizeChartTrigger{
+     float:left;
+     width:auto;
+     min-width:0;
+     height:45px;
+     color:#999;
+     background:0 0 !important;
+     line-height:1;
+     padding:15px 10px;
+     text-align:right;
+     text-transform:none;
+     border:none;
+     font-size:14px;
+     font-weight:400;
+     margin-bottom:0;
+     vertical-align:middle;
+     position:absolute;
+     right:0;
+     bottom:0
+}
+ .product-info-main .product-options-wrapper #sizeChartTrigger img{
+     vertical-align:text-bottom;
+     margin-right:5px
+}
+ .product-info-main .product-options-wrapper label{
+     display:block
+}
+ .product-info-main .product-options-wrapper .field{
+     margin-top:20px
+}
+ .product-info-main .product-options-wrapper .field:after{
+     content:'';
+     display:table;
+     clear:both
+}
+ .product-info-main .product-options-wrapper .field .label{
+     display:block;
+     float:none !important;
+     width:auto !important;
+     padding:0 !important;
+     text-align:left !important
+}
+ .product-info-main .product-options-wrapper .field.Size{
+     padding-right:120px
+}
+ .product-info-main .product-options-wrapper .field.Size .control{
+     position:relative;
+     width:100% !important
+}
+ .product-info-main .product-options-wrapper .field.Size .control:after{
+     content:'\f107';
+     font-family:'FontAwesome';
+     color:#000;
+     display:block;
+     width:auto;
+     height:80%;
+     position:absolute;
+     top:20%;
+     right:5px;
+     font-size:26px;
+     visibility:visible;
+     line-height:1
+}
+ .product-info-main .product-options-wrapper .field.Size .control select{
+     -webkit-appearance:none;
+     -moz-appearance:none;
+     appearance:none;
+     padding-left:0;
+     border:none;
+     border-bottom:1px solid #000;
+     background:0 0;
+     color:#999;
+     position:relative;
+     z-index:20;
+     cursor:pointer
+}
+ .product-info-main .product-options-wrapper .field.Size .control select:focus{
+     box-shadow:0 4px 4px -4px #68a8e0
+}
+ .product-info-main .returns_container a{
+     color:#999
+}
+ .product-info-main .returns_container a:hover{
+     color:#000
+}
+ .product-info-main .swatch-attribute{
+     margin-bottom:10px
+}
+ .product-info-main .swatch-attribute .mage-error{
+     position:absolute
+}
+ .product-info-main .swatch-option.text:not(.disabled):hover,.product-info-main .swatch-option.text.selected{
+     outline:none;
+     border:1px solid #000;
+     color:#000
+}
+ .product-info-main .swatch-option.color:not(.disabled):hover,.product-info-main .swatch-option.color.selected{
+     box-shadow:0 0 0 1px #8c8c8c;
+     outline:none
+}
+ .product-info-main .product.alert.stock{
+     text-align:center;
+     margin:20px auto 10px
+}
+ .product-info-main .product.alert.stock .action.alert{
+     width:100%;
+     padding:20px 10px
+}
+ .product-info-main .action.tocart{
+     width:100%;
+     padding:20px 15px;
+     margin-bottom:15px;
+     border-radius:0
+}
+ @media screen and (max-width:767px){
+     .product-info-main .action.tocart{
+         position:fixed;
+         border:8px solid #fff;
+         bottom:0;
+         left:0;
+         right:0;
+         margin:0;
+         z-index:100
+    }
+     .modal-popup .modal-title {
+         font-size: 14px;
+         font-weight: 600;
+    }
+}
+ .product-info-main .product_action_container{
+     margin:15px auto;
+     text-align:center
+}
+ .product-info-main .amxnotif-block label{
+     display:block;
+     margin:0 0 5px
+}
+ .product-info-main .amxnotif-block:after{
+     content:'';
+     display:table;
+     clear:both
+}
+ .product-info-main .amxnotif-block .amxnotif_guest_email{
+     float:left;
+     width:65%
+}
+ .product-info-main .amxnotif-block .amxnotif_guest_action{
+     float:left;
+     width:35%;
+     max-width:none;
+     padding-left:20px
+}
+ .product-info-main .amxnotif-block .amxnotif_guest_action>.primary{
+     float:none;
+     width:100%
+}
+ .product-info-main .amxnotif-block .amxnotif_guest_action .action.primary{
+     padding:10px 5px;
+     width:100%;
+     line-height:23px;
+     display:block;
+     margin:0
+}
+ .product-info-main .action.product_action{
+     background:0 0;
+     color:#000;
+     font-weight:400;
+     padding:0 10px;
+     border:none;
+     display:inline-block;
+     margin-bottom:15px;
+     line-height:1.4;
+     vertical-align:middle;
+     position:relative;
+     text-decoration:none !important
+}
+ .product-info-main .action.product_action:after{
+     content:'';
+     display:block;
+     left:10px;
+     right:10px;
+     bottom:-5px;
+     opacity:0;
+     height:1px;
+     background-color:#000;
+     transition:all .2s ease;
+     position:absolute
+}
+ .product-info-main .action.product_action:hover{
+     text-decoration:none
+}
+ .product-info-main .action.product_action:hover:after{
+     bottom:-2px;
+     opacity:1
+}
+ .product-info-main .action.product_action:active:after{
+     bottom:-3px
+}
+ .product-info-main .product.info:before{
+     content:'';
+     display:table;
+     clear:both
+}
+ .product-info-main .product.info .data.item.title{
+     display:none
+}
+ .product-info-main .product.info .data.item.content{
+     padding:0;
+     margin:0;
+     border:none
+}
+ .product-info-main .product.info .description ul{
+     list-style:none
+}
+ .product-info-main .product.info .description ul>li{
+     text-indent:-5px
+}
+ .product-info-main .product.info .description ul>li:before{
+     content:"-";
+     text-indent:-13px;
+     position:absolute
+}
+ button {
+     background-image: none;
+     background: #080808;
+     border: 1px solid #080808;
+     color: #fff;
+     cursor: pointer;
+     display: inline-block;
+     font-family: 'Sofia Pro W01',Arial,sans-serif;
+     font-weight: 600;
+     margin: 0;
+     padding: 9px 15px;
+     font-size: 1.4rem;
+     line-height: 1.6rem;
+     box-sizing: border-box;
+     vertical-align: middle;
+     border-radius:0;
+}
+ button:hover{
+     background-image: none;
+     background: #080808;
+     border: 1px solid #080808;
+     color: #fff;
+     cursor: pointer;
+     display: inline-block;
+     font-family: 'Sofia Pro W01',Arial,sans-serif;
+     font-weight: 600;
+     margin: 0;
+     padding: 9px 15px;
+     font-size: 1.4rem;
+     line-height: 1.6rem;
+     box-sizing: border-box;
+     vertical-align: middle;
+     border-radius:0;
+}
+ //Mobile @media (max-width: 600px) {
+}
+/*GLOBAL*/
+ @media screen and (max-width: 1920px){
+    /*********| 1080P |**********/
+}
+ @media screen and (max-width: 1600px){
+    /*****| MID HD DESKTOP |*****/
+}
+ @media screen and (max-width: 1440px){
+    /*****| MID HD DESKTOP |*****/
+}
+ @media screen and (max-width: 1366px){
+    /********| HD LAPTOP |*******/
+}
+ @media screen and (max-width: 1280px){
+    /**********| 720P |**********/
+}
+ @media screen and (max-width: 1152px){
+    /******| DESKTOP RARE |*******/
+}
+ @media screen and (max-width: 1024px){
+    /**| APPLE IPAD LANDSCAPE |**/
+}
+ @media screen and (max-width: 800px) {
+    /**| APPLE IPAD PORTRAIT |***/
+}
+ @media screen and (max-width: 640px) {
+    /*|SAMSUNG MOBILE LANDSCAPE|*/
+}
+ @media screen and (max-width: 480px) {
+    /*| GENERIC ANDROID PHONES |*/
+     h3 {
+         font-weight: 300;
+         line-height: 1.1;
+         font-size: 1.8rem;
+         margin-top: 1.5rem;
+         margin-bottom: 1rem;
+    }
+}
+ @media screen and (max-width: 414px) {
+    /********| IPHONE 6+ |*******/
+     h3 {
+         font-weight: 300;
+         line-height: 1.1;
+         font-size: 1.8rem;
+         margin-top: 1.5rem;
+         margin-bottom: 1rem;
+    }
+}
+ @media screen and (max-width: 375px) {
+    /********| IPHONE 6 |********/
+     h3 {
+         font-weight: 300;
+         line-height: 1.1;
+         font-size: 1.8rem;
+         margin-top: 1.5rem;
+         margin-bottom: 1rem;
+    }
+}
+ @media screen and (max-width: 360px) {
+    /*|SAMSUNG MOBILE PORTRAIT|**/
+     h3 {
+         font-weight: 300;
+         line-height: 1.1;
+         font-size: 1.8rem;
+         margin-top: 1.5rem;
+         margin-bottom: 1rem;
+    }
+}
+ @media screen and (max-width: 320px) {
+    /******| IPHONE 5,4... |*****/
+     h3 {
+         font-weight: 300;
+         line-height: 1.1;
+         font-size: 1.8rem;
+         margin-top: 1.5rem;
+         margin-bottom: 1rem;
+    }
+}

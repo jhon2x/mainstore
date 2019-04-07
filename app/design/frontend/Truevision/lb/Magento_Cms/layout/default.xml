@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-service">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Customer Service</argument>
+                    <argument name="path" xsi:type="string">customer-service</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="link-account">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                    <argument name="path" xsi:type="string">customer/account</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-service-delivery">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Delivery</argument>
+                    <argument name="path" xsi:type="string">customer-service/delivery</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-service-returns">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Returns</argument>
+                    <argument name="path" xsi:type="string">customer-service/returns</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+
+        <referenceBlock name="privacy-policy-link" remove="true" />
+    </body>
+</page>

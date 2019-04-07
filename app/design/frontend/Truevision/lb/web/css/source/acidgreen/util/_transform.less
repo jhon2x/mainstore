@@ -1,0 +1,12 @@
+.ag-transform(@_transform-params) {
+    transform: @_transform-params;
+    -webkit-transform: @_transform-params;
+}
+
+.ag-rotate(@_degree) {
+    @rotation: unit(@_degree, deg);
+    transform: rotate(@rotation);
+    -ms-transform: rotate(@rotation);
+    -webkit-transform: rotate(@rotation);
+}
+

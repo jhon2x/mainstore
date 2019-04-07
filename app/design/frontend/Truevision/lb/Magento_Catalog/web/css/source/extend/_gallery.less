@@ -1,0 +1,48 @@
+
+.fotorama .fotorama__stage__frame .fotorama__img {
+  width: 100%;
+  max-height: none !important;
+  left: 0 !important;
+  top: 0 !important;
+  transform: translate3d(0,0,0) !important;
+}
+
+.fotorama__caption{
+  display: none;
+}
+
+.fotorama__wrap{
+
+  .fotorama__stage{
+    left: 0px !important;
+
+    .fotorama__stage__shaft.fotorama__grab{
+      max-width: none !important;
+    }
+  }
+}
+
+fotorama__nav-wrap fotorama__nav-wrap--horizontal{
+  text-align:center;
+}
+
+.fotorama__arr.fotorama__arr--next{
+  right: 0px !important;
+}
+
+.fotorama-item .fotorama__dot{
+  height: 8px;
+  width: 8px;
+}
+
+.fotorama-item .fotorama__active .fotorama__dot{
+  background-color: @primary__color;
+  border-color: @primary__color;
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+  .fotorama__wrap {
+    padding-left: 142px;
+  }
+}

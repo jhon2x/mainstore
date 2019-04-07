@@ -1,0 +1,22 @@
+{
+  "name": "acidgreen/module-product-slider",
+  "license": "OSL-3.0",
+  "type": "magento2-module",
+  "description": "Magento 2 product slider by acidgreen",
+  "require": {
+  },
+  "authors":[
+    {
+      "name":"acidgreen",
+      "email":"tony.trinh@acidgreen.com.au"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Acidgreen\\ProductSlider\\": ""
+    }
+  }
+}

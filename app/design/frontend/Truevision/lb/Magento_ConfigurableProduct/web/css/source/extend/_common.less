@@ -1,0 +1,101 @@
+@color_1: #000;
+@color_2: #999;
+@color_3: #fff;
+@font_family_1: 'FontAwesome';
+@font_family_2: 'Sofia Pro W01',Arial,sans-serif;
+
+.product-info-main {
+    .product-options-wrapper {
+        .field {
+            .control {
+                &:after {
+                    content: '\f107';
+                    font-family: @font_family_1;
+                    color: @color_1;
+                    display: block;
+                    width: auto;
+                    height: 80%;
+                    position: absolute;
+                    top: 20%;
+                    right: 5px;
+                    font-size: 26px;
+                    visibility: visible;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}
+.product-info-main {
+	.product-options-wrapper {
+		.field.Size {
+			.control {
+				select {
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					padding-left: 0;
+					border: none;
+					border-bottom: 1px solid #000;
+					background: 0 0;
+					color: @color_2;
+					position: relative;
+					z-index: 20;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.product_action_container {
+		.action.towishlist {
+			background: 0 0;
+			color: @color_1;
+			font-weight: 400;
+			padding: 0 10px;
+			border: none;
+			display: inline-block;
+			margin-bottom: 15px;
+			line-height: 1.4;
+			vertical-align: middle;
+			position: relative;
+			text-decoration: none !important;
+		}
+	}
+}
+.field.configurable.required {
+	padding-right: 120px;
+}
+select {
+	background: #fff;
+	background-clip: padding-box;
+	border: 1px solid #e5e5e5;
+	border-radius: 1px;
+	font-family: @font_family_2;
+	font-size: 14px;
+	height: 45px;
+	line-height: 1.42857143;
+	padding: 5px 10px 4px;
+	vertical-align: baseline;
+	width: 100%;
+	box-sizing: border-box;
+}
+button#product-addtocart-button {
+	background-image: none;
+	background: #080808;
+	border: 1px solid #080808;
+	color: @color_3;
+	cursor: pointer;
+	display: inline-block;
+	font-family: @font_family_2;
+	font-weight: 600;
+	margin: 0;
+	padding: 9px 15px;
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+	box-sizing: border-box;
+	vertical-align: middle;
+	width: 100%;
+	padding: 20px 15px;
+	margin-bottom: 15px;
+	border-radius: 0;
+}

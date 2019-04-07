@@ -22,7 +22,7 @@ class Info extends \Magento\Config\Block\System\Config\Form\Field {
     public function render(\Magento\Framework\Data\Form\Element\AbstractElement $element) {
         $m = $this->moduleList->getOne($this->getModuleName());
         $html = '<div style="padding:12px;background-color:#F1F1F1;border:1px solid #d1d1d1;margin-bottom:5px;font-weight: 600;">
-            Pixtron: Free Responsive Theme <span style="color: #5BD77B;">v' . $m['setup_version'] . '</span> was developed by <a href="http://www.hiddentechies.com/" target="_blank">HiddenTechies</a>.
+            Pixtron: Free Responsive Theme <span style="color: #2a5d92;">v' . $m['setup_version'] . '</span> was developed by <a href="http://www.hiddentechies.com/" target="_blank">HiddenTechies</a>.
         </div>';
 
         if (in_array('curl', get_loaded_extensions())) {

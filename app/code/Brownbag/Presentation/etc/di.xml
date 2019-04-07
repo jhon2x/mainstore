@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <preference for="Brownbag\Presentation\Api\PresentationRepositoryInterface" type="Brownbag\Presentation\Model\PresentationRepository" />
+    <preference for="Brownbag\Presentation\Api\Data\PresentationInterface" type="Brownbag\Presentation\Model\Presentation" />
+    <preference for="Brownbag\Presentation\Api\Data\PresentationSearchResultInterface" type="Brownbag\Presentation\Model\PresentationSearchResult" />
+
+	<!-- reference for datasource -->
+	<virtualType name="BrownbaguiDataGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+	    <arguments>
+	        <argument name="collection" xsi:type="object" shared="false">Brownbag\Presentation\Model\ResourceModel\Presentation\Collection</argument>
+	        <argument name="filterPool" xsi:type="object" shared="false">BrownbagPresentationDataGridFilterPool</argument>
+	    </arguments>
+	</virtualType>
+
+	<virtualType name="Brownbag\Presentation\Model\ResourceModel\Presentation\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+	    <arguments>
+	        <argument name="mainTable" xsi:type="string">brownbag_presentation</argument>
+	        <argument name="resourceModel" xsi:type="string">Brownbag\Presentation\Model\ResourceModel\Presentation</argument>
+	    </arguments>
+	</virtualType>
+
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="brownbagpresentation_data_grid_data_source" xsi:type="string">Brownbag\Presentation\Model\ResourceModel\Presentation\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <!-- 1 baseTmpPath is handle by this -->
+    <virtualType name="BrownbagPresentationImageUploader" type="Brownbag\Presentation\Model\Uploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="const">Brownbag\Presentation\Model\Uploader::IMAGE_TMP_PATH</argument>
+            <argument name="basePath" xsi:type="const">Brownbag\Presentation\Model\Uploader::IMAGE_PATH</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Brownbag\Presentation\Model\UploaderPool">
+        <arguments>
+            <argument name="uploaders" xsi:type="array">
+                <item name="image" xsi:type="string">BrownbagPresentationImageUploader</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Brownbag\Presentation\Controller\Adminhtml\Data\Upload">
+        <arguments>
+            <argument name="uploader" xsi:type="object">BrownbagPresentationImageUploader</argument>
+        </arguments>
+    </type>
+    <type name="Brownbag\Presentation\Ui\Component\Listing\Column\Image">
+        <arguments>
+            <argument name="imageModel" xsi:type="object">BrownbagPresentationImageUploader</argument>
+    	</arguments>
+    </type>    
+
+</config>	
+
+

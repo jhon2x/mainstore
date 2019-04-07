@@ -1,0 +1,97 @@
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__xs) {
+
+	.page-title-wrapper:not(.product) h1 {
+	  font-size: 30px!important;
+	}
+
+	.page-title-wrapper:not(.product) h1 {
+
+	}
+
+	span.user_account_icon{
+		float: left;
+	  	width: 45px;
+	  	height: 45px;
+	  	margin-right: 10px;
+	  	border: 1px solid #000;
+	  	border-radius: 50%;
+	  	display: inline-block;
+	  	text-align: center;
+	}
+
+	span.initials{
+		display: inline-block;
+		width: 43px;
+		line-height: 43px;
+		text-align: center;
+		font-size: 16px;
+	}
+
+	.mobile_account a {
+	    text-decoration: underline;
+	    display: inline-block;
+	    margin-right: 5px;
+	    color: #999;
+	}
+
+	.col-sm-4.col-md-3 {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	}
+
+	.link.my-account{
+		display: none;
+	}
+}
+
+@media (min-width: 768px), print {
+
+	.form-address-edit .fieldset > .field:not(.choice) > .label {
+	    box-sizing: border-box;
+	    float: left;
+	    box-sizing: content-box;
+	    float: none;
+	    width: auto;
+	    text-align: left;
+	    padding: 0;
+	}
+
+	.form-address-edit .fieldset > .field:not(.choice) > .control {
+	    float: none;
+	    width: auto;
+	}
+
+	.label {
+	    display: inline;
+	    padding: 0.2em 0.6em 0.3em;
+	    font-size: unset;
+    }
+
+    legend {
+    	border-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .action.primary {
+    	background: #000;
+        border: 1px solid #000;
+        color: #fff;
+        display: inline-block;
+        font-weight: 600;
+        padding: 10px 40px;
+        font-size: 1.4rem;
+        line-height: 1.7;
+        box-sizing: border-box;
+        vertical-align: middle;
+        font-family: 'Sofia Pro W01', 'Arial', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    .block.newsletter .action.subscribe {
+	    width: 100%;
+	    padding: 7px 10px;
+	    font-size: 12px;
+	    font-weight: 400;
+	}
+}

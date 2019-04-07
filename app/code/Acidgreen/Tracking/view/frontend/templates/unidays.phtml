@@ -1,0 +1,10 @@
+<?php
+$url = $block->getTrackingUrl();
+?>
+<?php if(!empty($url)): ?>
+    <img src="<?php echo $url ?>" class="unidays-tracking" />
+<?php else: ?>
+    <?php if($block->getConfig("debug")): ?>
+        <!-- Unidays No Code -->
+    <?php endif; ?>
+<?php endif; ?>

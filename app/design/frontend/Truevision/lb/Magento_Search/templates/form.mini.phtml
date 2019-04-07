@@ -1,0 +1,74 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper(\Magento\Search\Helper\Data::class);
+?>
+<li class="desktop-search-container">
+    <div class="block block-search ag-animate-dropdown">
+        <div class="block block-title hidden-xs" data-role="title">
+            <i class="ppm-icon-search" aria-hidden="true"></i>
+        </div>
+        <div id="header-mini-search" class="block block-content">
+            <form class="form minisearch" id="search_mini_form" action="<?= /* @escapeNotVerified */ $helper->getResultUrl() ?>" method="get">
+                <div class="field search">
+                    <div class="control">
+                        <input id="search"
+                            data-mage-init='{"quickSearch":{
+                                    "formSelector":"#search_mini_form",
+                                    "url":"<?= /* @escapeNotVerified */ $helper->getSuggestUrl()?>",
+                                    "destinationSelector":"#search_autocomplete"}
+                            }'
+                            type="text"
+                            name="<?= /* @escapeNotVerified */ $helper->getQueryParamName() ?>"
+                            value="<?= /* @escapeNotVerified */ $helper->getEscapedQueryText() ?>"
+                            placeholder="<?= /* @escapeNotVerified */ __('Search entire store here...') ?>"
+                            class="input-text"
+                            maxlength="<?= /* @escapeNotVerified */ $helper->getMaxQueryLength() ?>"
+                            role="combobox"
+                            aria-haspopup="false"
+                            aria-autocomplete="both"
+                            autocomplete="off"/>
+                        <div id="search_autocomplete" class="search-autocomplete"></div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="submit"
+                            title="<?= $block->escapeHtml(__('Search')) ?>"
+                            class="action search">
+                        <span><?= /* @escapeNotVerified */ __('Search') ?></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="hidden">
+            <script type="text/javascript">
+                require(['jquery', 'mage/dropdown'], function($, dropdown) {
+                    var elId = "#header-mini-search";
+                    var container = ".header.content.container";
+                    var appendToEl = ".block.block-search";
+                    var options = {
+                        "autoOpen": false,
+                        "appendTo": appendToEl,
+                        "closeOnMouseLeave": false,
+                        "closeOnClickOutside": true,
+                        "dialogContentClass": "opened",
+                        "triggerClass":"active",
+                        "parentClass":"active",
+                        "triggerTarget": ".block-search .block-title",
+                        buttons: []
+                    };
+                    $(elId).dropdownDialog(options);
+                });
+            </script>
+        </div>
+    </div>
+</li>

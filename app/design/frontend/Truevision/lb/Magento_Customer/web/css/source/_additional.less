@@ -1,0 +1,139 @@
+@text_color__light: #999;
+@text_color__dark: #000;
+@color-border: #000;
+
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .box-newsletter, .box{
+        min-height: 134px;
+    }
+
+    body, html {
+        overflow-x: hidden;
+    }
+
+    .block-wishlist {
+      display: none;
+    }
+
+    .block-dashboard-info,
+    .block-dashboard-addresses {
+        .block-title {
+            display: none;
+        }
+    }
+
+    .page-title-wrapper:not(.product) h1 {
+        position: relative;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        font-size: 36px;
+        font-weight: 600;
+    }
+
+    body {
+	    color: #000;
+	    font-family: 'Sofia Pro W01',Arial,sans-serif;
+	    font-style: normal;
+	    font-weight: 400;
+	    line-height: unset; //1.42857143;
+	    font-size: 1.4rem;
+	}
+
+  .row.large_gutters>.inner{
+      padding-left:20px;
+      padding-right:20px
+  }
+
+  @media screen and (max-width:767px){
+      .row.large_gutters>.inner{
+          padding-left:10px;
+          padding-right:10px
+      }
+      .grid_6{
+          width:100%
+      }
+  }
+
+  @media only screen and (min-width:1460px){
+
+      .grid_5th_xxl{
+          width:20%
+      }
+
+      .grid_5th_4_xxl{
+          width:80%
+      }
+  }
+
+  @media only screen and (min-width:1200px) and (max-width:1459px){
+
+    .grid_5th_xl{
+        width:20%
+    }
+
+    .grid_5th_4_xl{
+        width:80%
+    }
+
+    .grid_18_xl{
+        width:75%
+    }
+  }
+
+  @media only screen and (min-width:768px) and (max-width:1023px){
+    .grid_8_m{
+        width:33.333333333333%
+    }
+
+    .grid_16_m{
+        width:66.666666666667%
+    }
+  }
+
+  .inner{
+      padding-left:10px;
+      padding-right:10px
+  }
+
+  .account-nav ul.items .item a,.account-nav ul.items .item strong{
+      font-weight:400;
+      color:#000;
+  }
+
+  .content_wrapper{
+      padding-left:50px !important;
+      border-left:none
+  }
+  @media screen and (max-width:1023px){
+      .content_wrapper{
+          padding-left:10px !important
+      }
+  }
+
+  .row.large_gutters.outer{
+      margin-left:-20px;
+      margin-right:-20px
+  }
+  @media screen and (max-width:767px){
+      .row.large_gutters.outer{
+          margin-left:-10px;
+          margin-right:-10px
+      }
+  }
+
+  .grid_5th_xxl, .content_wrapper, .grid_16_m, .grid_18, .grid_5th_4_xl, .grid_5th_4_xxl, .inner{
+    display: inline-block;
+    float: left;
+    /* position: relative; */
+    /* margin: 0; */
+    /* padding: 0; */
+    /* -webkit-box-sizing: border-box; */
+    -moz-box-sizing: border-box;
+    /* box-sizing: border-box; */
+  }
+
+}

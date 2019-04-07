@@ -1,0 +1,35 @@
+/*
+.btn{
+  padding: 10px 25px;
+  font-size: 12px;
+  font-weight: 400;
+  z-index: 1;
+  transition: all .2s ease;
+  letter-spacing: 1px;
+}
+
+.action.primary{
+  border-radius: 0px !important;
+  background: #000;
+  border: 0px;
+  font-weight: 600;
+  padding: 10px 40px;
+  font-size: 1.4rem;
+  line-height: 1.7;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+*/
+& when (@media-common = true) {
+
+    a.action.primary, button.action.primary {
+
+
+        &, &:hover, &:active, &:visited {
+            border-radius: 0 !important;
+            padding: 15px 50px;
+            border: 0px;
+        }
+
+    }
+}

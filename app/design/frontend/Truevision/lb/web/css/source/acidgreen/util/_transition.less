@@ -1,0 +1,14 @@
+.ag-transition(@_properties, @_duration: .5s, @_timing-function: ease-in-out) {
+    transition-property: @_properties;
+    transition-duration: @_duration;
+    transition-timing-function: @_timing-function;
+    -webkit-transition-property: @_properties;
+    -webkit-transition-duration: @_duration;
+    -webkit-transition-timing-function: @_timing-function;
+}
+
+.ag-all-transition(@_duration){
+    -webkit-transition: all @_duration;
+    -ms-transition: all @_duration;
+    transition: all @_duration;
+}

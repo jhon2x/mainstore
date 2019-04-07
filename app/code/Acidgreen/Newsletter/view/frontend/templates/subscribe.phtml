@@ -1,0 +1,55 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+
+?>
+<div class="block newsletter">
+    <div class="title"><?= $block->escapeHtml(__('Sign up and get')) ?> <strong><?= $block->escapeHtml(__('$15 off.')) ?></strong></div>
+    <form class="form subscribe"
+        novalidate
+        action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+        method="post"
+        data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+        id="newsletter-validate-detail">
+            <div class="row">
+                <div class="col col-xs-4">
+                    <div class="field">
+                        <div class="control fancy-select">
+                            <span class="custom_select">
+                                <select name="newsletter_preference123 " id="newsletter_preference" title="<?= $block->escapeHtmlAttr(__('Newsletter preference')) ?>"  data-validate="{required:true}">
+                                    <?php
+                                        foreach($block->getGender() as $gender){
+                                            ?><option value="<?php echo $gender['value'];?>"><?= $gender['label'] ?></option><?php
+                                        }
+                                    ?>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xs-4">
+                     <div class="field">
+                        <label class="label" for="newsletter"><span><?= $block->escapeHtml(__('Sign Up for Our Newsletters:')) ?></span></label>
+                        <div class="control">
+                            <input name="email" type="email" id="newsletter"
+                                        placeholder="<?= $block->escapeHtml(__('Your email address')) ?>"
+                                        data-validate="{required:true, 'validate-email':true}"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-xs-4">
+                    <div class="actions">
+                        <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit">
+                            <span><?= $block->escapeHtml(__('Get $15 Off')) ?></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+    </form>
+</div>

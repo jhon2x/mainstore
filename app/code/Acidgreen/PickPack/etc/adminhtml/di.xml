@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Copyright © 2017 Magento. All rights reserved.
+* See COPYING.txt for license details.
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Sales\Model\Order\Pdf\Items\Shipment\DefaultShipment" type="Acidgreen\PickPack\Model\Order\Pdf\Items\Shipment\DefaultShipment"/>
+    <preference for="Magento\Sales\Model\Order\Pdf\Shipment" type="Acidgreen\PickPack\Model\Order\Pdf\Shipment"/>
+</config>

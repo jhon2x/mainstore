@@ -1,0 +1,138 @@
+& when (@media-common = true) {
+    .header.links {
+        .minicart-wrapper {
+            margin: 0;
+            .action.showcart:before {
+                content: "";
+                height: 0;
+                width: 0;
+                display: none;
+            }
+            .block-minicart {
+                &:before,
+                &:after {
+                    content: "";
+                    display: none;
+                }
+
+                padding: 35px 0 0 0;
+                border: none;
+                box-shadow: 0 2px 5px rgba(0,0,0,.15);
+                width: 320px;
+
+                #minicart-content-wrapper {
+
+
+                    .minicart-items-wrapper {
+                        margin: auto;
+                        border: none;
+
+                        .product {
+                            .product-item-details {
+                                padding-left: 120px;
+                                font-size: @font__size-normal;
+                                text-align: left;
+
+                                .product-item-name {
+                                    font-weight: @font__weight-bold;
+                                    margin-bottom: 0;
+                                    line-height: 1;
+                                }
+                .product-item-pricing {
+                    margin-bottom: 20px;
+                }
+                                .product.options.list {
+                                    margin-bottom:0;
+                    line-height: 1;
+                                    .label {
+                                        color: #000;
+                                        font-size: @font__size-normal;
+                                        font-weight: @font__weight-normal;
+                                        display: inline-block;
+                                        text-align: left;
+                    padding-left: 0;
+                    padding-bottom: 0;
+                        margin-bottom: 0;
+                                    }
+                                    .values {
+                                        display: inline-block;
+                                        text-align: left;
+                    padding-right: 10px;
+                    margin-bottom: 0;
+                                    }
+                                }
+
+                                .price-excluding-tax {
+                                    margin-top: 0;
+                                }
+
+                                .details-qty.qty {
+                                    margin-top: 0;
+                    line-height: 1;
+                                    label {
+                                        color: #000;
+                                        font-size: @font__size-normal;
+                                        font-weight: @font__weight-normal;
+                    padding-left: 0;
+                    margin-top: 0;
+                                        &:after {
+                                            display: none;
+                                        }
+                                    }
+
+                                    input {
+                                        height: auto;
+                                        color: #000;
+                                        border: none;
+                                    }
+
+                                    .action.delete {
+                                        &:before {
+                                            content: '\e616';
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .items-total {
+                        float: none;
+
+                        .actions {
+                            border: solid 1px #000;
+                            padding: 0 35px;
+                            font-size: 12px;
+                            font-weight: @font__weight-bold;
+                            width: auto;
+                            display: inline-block;
+                            line-height: 2;
+                        }
+                    }
+
+                    .subtotal {
+                        text-align: center;
+                        margin: auto;
+                        padding: 10px 0;
+
+                        &> span.label {
+                            display: inline-block;
+                            color: #000;
+                            font-size: 14px;
+                            font-weight: 400;
+                            padding-right: 0;
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+
+                        &> .amount.price-container {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

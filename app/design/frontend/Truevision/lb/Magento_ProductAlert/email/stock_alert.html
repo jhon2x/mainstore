@@ -1,0 +1,35 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<!--@subject {{trans "Back in stock!"}} @-->
+<!--@vars {
+"var alertGrid|raw":"Alert Data Grid",
+"var customerName":"Customer Name",
+"template config_path=\"design\/email\/footer_template\"":"Email Footer Template",
+"template config_path=\"design\/email\/header_template\"":"Email Header Template"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<table width="600">
+  <tr class="email-intro">
+    <td style="padding: 50px 30px; border: 1px solid #eee;">
+      <p class="greeting" style="font-size: 20px; color: #000; margin: 0 0 15px; text-align:center;">Hi, {{trans "%customer_name" customer_name=$order.getCustomerName()}}</p>
+      <p style="font-size: 14px; color: #999; line-height: 1.8; margin: 0; text-align:center;">
+        {{trans "We wanted you to know that these products are now available."}}
+      </p>
+    </td>
+  </tr>
+  <tr class="email-summary">
+    <td style="padding: 20px; text-align: center;">
+      <h1 style="text-align: center; font-weight: normal; color: #000;">{{trans 'Back in Stock!'}}</h1>
+    </td>
+  </tr>
+</table>
+
+{{var alertGrid|raw}}
+
+{{template config_path="design/email/footer_template"}}
